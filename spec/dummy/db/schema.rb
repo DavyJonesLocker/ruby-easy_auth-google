@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(:version => 20121202074056) do
 
   create_table "identities", :force => true do |t|
-    t.string   "username"
+    t.string   "uid"
     t.string   "token"
     t.string   "account_type"
     t.integer  "account_id"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(:version => 20121202074056) do
     t.datetime "updated_at",   :null => false
   end
 
-  add_index "identities", ["username"], :name => "index_identities_on_username"
+  add_index "identities", ["uid"], :name => "index_identities_on_uid"
 
   create_table "users", :force => true do |t|
     t.string   "email"

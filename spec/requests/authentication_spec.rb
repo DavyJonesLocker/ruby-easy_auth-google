@@ -14,6 +14,6 @@ feature 'Google OAuth Authentication', :js do
     visit oauth2_callback_path(:provider => :google, :code => 'test-auth-code')
 
     current_path.should eq dashboard_path
-    page.should have_content '123456789'
+    page.should have_content 'test@example.com'
   end
 end

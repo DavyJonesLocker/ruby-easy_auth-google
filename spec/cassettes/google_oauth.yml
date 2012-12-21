@@ -89,9 +89,7 @@ http_interactions:
       - close
     body:
       encoding: US-ASCII
-      string: ! "{\n \"id\": \"123456789\",\n \"name\": \"Test User\",\n
-        \"given_name\": \"Test\",\n \"family_name\": \"User\",\n \"link\": \"https://plus.google.com/dummy-data\",\n
-        \"gender\": \"male\",\n \"birthday\": \"0000-01-01\",\n \"locale\": \"en\"\n}\n"
+      string: "{\n \"id\": \"123456789\",\n \"email\":\"test@example.com\",\n \"name\": \"Test User\",\"given_name\": \"Test\",\n \"family_name\": \"User\",\n \"link\": \"https://plus.google.com/dummy-data\",\"gender\": \"male\",\n \"birthday\": \"0000-01-01\",\n \"locale\": \"en\"\n}\n"
     http_version: '1.1'
   recorded_at: Thu, 11 Oct 2012 15:12:13 GMT
 recorded_with: VCR 2.2.1

@@ -1,9 +1,15 @@
 module EasyAuth::Models::Identities::Oauth2::Google
+  def oauth2_scope
+    'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email'
+  end
+
   def authorize_url
     '/o/oauth2/auth'
   end
 
-  private
+  def account_attributes_map
+    { :email => 'email', :first_name => 'given_name', :last_name => 'family_name', :name => 'name' }
+  end
 
   def user_info_url
     'https://www.googleapis.com/oauth2/v1/userinfo'
