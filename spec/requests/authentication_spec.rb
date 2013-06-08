@@ -1,8 +1,6 @@
 require 'spec_helper'
 
-feature 'Google OAuth Authentication', :js do
-  use_vcr_cassette 'google_oauth', :match_requests_on => [:uri]
-
+feature 'Google OAuth Authentication', :js, :vcr do
   scenario 'Google link redirects to the Google OAuth url' do
     visit root_path
 

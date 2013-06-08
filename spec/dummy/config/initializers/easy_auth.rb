@@ -1,3 +1,3 @@
 EasyAuth.config do |c|
-  c.oauth2_client :google, ENV['OAUTH_GOOGLE_CLIENT_ID'], ENV['OAUTH_GOOGLE_SECRET']
+  c.oauth2_client :google, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET']
 end
