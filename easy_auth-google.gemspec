@@ -10,18 +10,19 @@ Gem::Specification.new do |s|
   s.authors     = ['Brian Cardarella', 'Dan McClain']
   s.email       = ['brian@dockyard.com', 'bcardarella@gmail.com', 'rubygems@danmcclain.net']
   s.homepage    = 'https://github.com/dockyard/easy_auth-google'
-  s.summary     = 'EasyAuth-Google'
-  s.description = 'EasyAuth-Google'
+  s.summary     = 'EasyAuth for Google'
+  s.description = 'EasyAuth plugin to authenticate with Google accounts'
 
   s.files = Dir['{app,config,db,lib}/**/*'] + ['Rakefile', 'README.md']
 
-  s.add_dependency 'easy_auth-oauth2', '~> 0.2.0'
+  s.add_dependency 'easy_auth-oauth2'
 
-  s.add_development_dependency 'sqlite3'
+  s.add_development_dependency 'rails'
+  s.add_development_dependency 'pg'
   s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'capybara'
   s.add_development_dependency 'vcr'
   s.add_development_dependency 'poltergeist'
   s.add_development_dependency 'database_cleaner'
-  s.add_development_dependency 'launchy'
+  s.add_development_dependency 'rails-dummy'
 end
