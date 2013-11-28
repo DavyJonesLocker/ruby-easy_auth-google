@@ -11,7 +11,7 @@ feature 'Google OAuth Authentication', :js, :vcr do
   scenario 'Handling a google callback' do
     visit oauth2_callback_path(:provider => :google, :code => 'test-auth-code')
 
-    current_path.should eq dashboard_path
+    current_path.should eq dashboard_show_path
     page.should have_content 'test@example.com'
   end
 end
