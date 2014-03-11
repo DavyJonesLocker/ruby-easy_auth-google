@@ -11,7 +11,7 @@ module EasyAuth::Models::Identities::Oauth2::Google
     'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email'
   end
 
-  def user_info_url
+  def account_attributes_url
     'https://www.googleapis.com/oauth2/v1/userinfo'
   end
 
@@ -23,7 +23,7 @@ module EasyAuth::Models::Identities::Oauth2::Google
     'https://accounts.google.com'
   end
 
-  def retrieve_uid(user_info)
-    user_info['email']
+  def retrieve_uid(account_attributes)
+    account_attributes['email']
   end
 end
